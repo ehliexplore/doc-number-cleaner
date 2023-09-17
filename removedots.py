@@ -3,6 +3,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.textinput import TextInput
 from kivy.uix.label import Label
 from kivy.uix.button import Button
+from kivy.core.clipboard import Clipboard
 
 def clean_number(number):
     return ''.join(char for char in number if char.isdigit())
@@ -28,12 +29,22 @@ class CleanNumberApp(App):
         self.button.bind(on_press=self.clean)
         self.b.add_widget(self.button)
 
+        self.button_copy = Button(text='COPY')
+        self.button_copy.bind(on_press=self.copy_to_clipboard)
+        self.b.add_widget(self.button_copy)
+
         return self.b
+    
     
     def clean(self, instance):
         raw_number = self.textinput.text
         cleaned_number = clean_number(raw_number)
         self.result.text = cleaned_number
+
+
+    def copy_to_clipboard(self, instance):
+        Clipboard.copy(self.result.text)
+
 
 if __name__ == '__main__':
     CleanNumberApp().run()
