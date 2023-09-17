@@ -13,16 +13,16 @@ class CleanNumberApp(App):
     def build(self):
         self.b = BoxLayout(orientation='vertical')
 
-        self.label1 = Label(text='COLE O NÚMERO DO DOCUMENTO: ')
+        self.label1 = Label(text='COLE O NÚMERO DO DOCUMENTO: ', font_size=16)
         self.b.add_widget(self.label1)
 
-        self.textinput = TextInput(multiline=False)
+        self.textinput = TextInput(multiline=False, font_size=32)
         self.b.add_widget(self.textinput)
 
-        self.label2 = Label(text='NÚMERO LIMPO: ')
+        self.label2 = Label(text='NÚMERO LIMPO: ', font_size=16)
         self.b.add_widget(self.label2)
 
-        self.result = Label(text='', font_size=32)
+        self.result = Label(text='', font_size=34)
         self.b.add_widget(self.result)
 
         self.button = Button(text='LIMPAR NÚMERO')
