@@ -26,10 +26,14 @@ class CleanNumberApp(App):
         self.result = Label(text='', font_size=34)
         self.b.add_widget(self.result)
 
-        self.button = Button(text='LIMPAR E COPIAR')
-        self.button.bind(on_press=self.clean_and_copy)
-        self.b.add_widget(self.button)
-        self.button.background_color = [1, 1, 0, 1]
+        self.button_clean_copy = Button(text='LIMPAR E COPIAR')
+        self.button_clean_copy.bind(on_press=self.clean_and_copy)
+        self.b.add_widget(self.button_clean_copy)
+        self.button_clean_copy.background_color = [1, 1, 1, 1]
+
+        self.button_reset = Button(text='RESET', background_color=[1, 0, 0, 1])
+        self.button_reset.bind(on_press=self.reset)
+        self.b.add_widget(self.button_reset)
 
 
         return self.b
@@ -42,9 +46,15 @@ class CleanNumberApp(App):
         Clipboard.copy(self.result.text)
 
         # Change the button text and color
-        self.button.text = "O NÚMERO LIMPO FOI COPIADO"
-        self.button.background_color = [0, 1, 0, 1] # RGB and alpha ([R, G, B, A])
+        self.button_clean_copy.text = "O NÚMERO LIMPO FOI COPIADO"
+        self.button_clean_copy.background_color = [0, 1, 0, 1] # RGB and alpha ([R, G, B, A])
 
+
+    def reset(self, instance):
+        self.textinput.text = ''
+        self.result.text = ''
+        self.button_clean_copy.text = 'LIMPAR E COPIAR'
+        self.button_clean_copy.background_color = [1, 1, 1, 1]
 
 
 if __name__ == '__main__':
