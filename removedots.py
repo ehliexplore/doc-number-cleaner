@@ -17,6 +17,7 @@ class CleanNumberApp(App):
         self.b.add_widget(self.label1)
 
         self.textinput = TextInput(multiline=False, font_size=32)
+        self.textinput.bind(on_text_validate=self.clean_and_copy)
         self.b.add_widget(self.textinput)
 
         self.label2 = Label(text='NÚMERO LIMPO: ', font_size=16)
