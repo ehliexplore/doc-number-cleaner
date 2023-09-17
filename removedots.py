@@ -29,6 +29,7 @@ class CleanNumberApp(App):
         self.button = Button(text='LIMPAR E COPIAR')
         self.button.bind(on_press=self.clean_and_copy)
         self.b.add_widget(self.button)
+        self.button.background_color = [1, 1, 0, 1]
 
 
         return self.b
@@ -39,6 +40,11 @@ class CleanNumberApp(App):
         cleaned_number = clean_number(raw_number)
         self.result.text = cleaned_number
         Clipboard.copy(self.result.text)
+
+        # Change the button text and color
+        self.button.text = "O NÚMERO LIMPO FOI COPIADO"
+        self.button.background_color = [0, 1, 0, 1] # RGB and alpha ([R, G, B, A])
+
 
 
 if __name__ == '__main__':
