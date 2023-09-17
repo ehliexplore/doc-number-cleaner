@@ -1,4 +1,4 @@
-# limpador-de-numero-de-documentos
+# Limpador de Números
 
 Um aplicativo simples desenvolvido com Kivy para limpar e copiar números de documentos. Ideal para retirar caracteres especiais ou espaços indesejados de números como CPF, CNPJ, RG entre outros.
 
