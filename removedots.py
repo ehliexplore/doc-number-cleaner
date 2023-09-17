@@ -25,24 +25,18 @@ class CleanNumberApp(App):
         self.result = Label(text='', font_size=34)
         self.b.add_widget(self.result)
 
-        self.button = Button(text='LIMPAR NÚMERO')
-        self.button.bind(on_press=self.clean)
+        self.button = Button(text='LIMPAR E COPIAR')
+        self.button.bind(on_press=self.clean_and_copy)
         self.b.add_widget(self.button)
 
-        self.button_copy = Button(text='COPIAR')
-        self.button_copy.bind(on_press=self.copy_to_clipboard)
-        self.b.add_widget(self.button_copy)
 
         return self.b
     
 
-    def clean(self, instance):
+    def clean_and_copy(self, instance):
         raw_number = self.textinput.text
         cleaned_number = clean_number(raw_number)
         self.result.text = cleaned_number
-
-
-    def copy_to_clipboard(self, instance):
         Clipboard.copy(self.result.text)
 
 
