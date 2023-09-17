@@ -13,25 +13,25 @@ class CleanNumberApp(App):
     def build(self):
         self.b = BoxLayout(orientation='vertical')
 
-        self.label1 = Label(text='COLE O NÚMERO DO DOCUMENTO: ', font_size=16)
+        self.label1 = Label(text='COLE O NÚMERO DO DOCUMENTO: ', font_size=16, bold=True)
         self.b.add_widget(self.label1)
 
         self.textinput = TextInput(multiline=False, font_size=32)
         self.textinput.bind(on_text_validate=self.clean_and_copy)
         self.b.add_widget(self.textinput)
 
-        self.label2 = Label(text='NÚMERO LIMPO: ', font_size=16)
+        self.label2 = Label(text='NÚMERO LIMPO: ', font_size=16, bold=True)
         self.b.add_widget(self.label2)
 
-        self.result = Label(text='', font_size=34)
+        self.result = Label(text='', font_size=34, bold=True)
         self.b.add_widget(self.result)
 
-        self.button_clean_copy = Button(text='LIMPAR E COPIAR')
+        self.button_clean_copy = Button(text='LIMPAR E COPIAR', bold=True)
         self.button_clean_copy.bind(on_press=self.clean_and_copy)
         self.b.add_widget(self.button_clean_copy)
         self.button_clean_copy.background_color = [1, 1, 1, 1]
 
-        self.button_reset = Button(text='RESET', background_color=[1, 0, 0, 1])
+        self.button_reset = Button(text='RESET', background_color=[1, 0, 0, 1], bold=True)
         self.button_reset.bind(on_press=self.reset)
         self.b.add_widget(self.button_reset)
 
