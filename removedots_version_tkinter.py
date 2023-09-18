@@ -30,8 +30,9 @@ label1.grid(column=0, row=0)
 
 text_input = ttk.Entry(frame, font=("Arial", 32))
 text_input.grid(column=0, row=1)
-text_input.bind('<Return>', clean_and_copy)  # Bind Enter key
-text_input.bind('<Tab>', clean_and_copy) # Bind Tab key
+text_input.bind('<Return>', clean_and_copy)  # Bind Enter key main button
+text_input.bind('<Tab>', clean_and_copy) # Bind Tab key main button
+
 
 label2 = ttk.Label(frame, text='NÚMERO LIMPO:', font=("Arial", 16))
 label2.grid(column=0, row=2)
