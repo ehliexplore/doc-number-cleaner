@@ -23,6 +23,7 @@ def reset():
 
 root = ThemedTk(theme="aquativo")
 root.title("Limpador de Número")
+root.resizable(False, False) 
 
 # Create widgets
 frame = ttk.Frame(root, padding="10")
@@ -44,11 +45,11 @@ result_label = ttk.Label(frame, text='', font=("Arial", 34))
 result_label.grid(column=0, row=3)
 
 clean_copy_button = ttk.Button(frame, text='LIMPAR E COPIAR', command=clean_and_copy)
-clean_copy_button.grid(column=0, row=4)
+clean_copy_button.grid(column=0, row=4, sticky=(tk.W, tk.E))
 clean_copy_button.config(style="")
 
 reset_button = ttk.Button(frame, text='RESET', command=reset)
-reset_button.grid(column=0, row=5)
+reset_button.grid(column=0, row=5, sticky=(tk.W, tk.E))
 reset_button.config(style="")
 
 
