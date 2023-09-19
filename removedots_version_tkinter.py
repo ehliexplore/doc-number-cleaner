@@ -3,9 +3,6 @@ from tkinter import ttk
 from ttkthemes import ThemedTk
 
 
-#ok_message = "O NÚMERO LIMPO FOI COPIADO"
-
-
 def clean_number(number):
     return ''.join(char for char in number if char.isdigit())
 
