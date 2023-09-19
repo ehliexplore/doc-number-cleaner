@@ -23,7 +23,6 @@ def reset():
 
 root = ThemedTk(theme="aquativo")
 root.title("Limpador de Número")
-root.resizable(False, False) 
 
 # Create widgets
 frame = ttk.Frame(root, padding="10")
