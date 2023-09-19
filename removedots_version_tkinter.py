@@ -24,7 +24,7 @@ def reset():
     clean_copy_button.config(text="LIMPAR E COPIAR", bg="white")
 
 
-root = ThemedTk(theme="keramik")
+root = ThemedTk(theme="aquativo")
 root.title("Limpador de Número")
 
 # Create widgets
@@ -40,7 +40,7 @@ text_input.bind('<Return>', clean_and_copy)  # Bind Enter key main button
 text_input.bind('<Tab>', clean_and_copy) # Bind Tab key main button
 
 
-label2 = tk.Label(frame, text='Número limpo:', font=("Arial", 16))
+label2 = ttk.Label(frame, text='Número limpo:', font=("Arial", 16))
 label2.grid(column=0, row=2)
 
 result_label = ttk.Label(frame, text='', font=("Arial", 34))
