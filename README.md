@@ -1,6 +1,8 @@
 # Limpador de Números
 
-Um aplicativo simples desenvolvido com Kivy para limpar e copiar números de documentos. Ideal para retirar caracteres especiais ou espaços indesejados de números como CPF, CNPJ, RG entre outros.
+Um aplicativo simples desenvolvido com a biblioteca Tkinter para limpar e copiar números de documentos. Ideal para retirar caracteres especiais ou espaços indesejados de números como CPF, CNPJ, RG entre outros.
+
+ (Primeiramente criado em Kivy, porém não consegui fazer o executável dessa versão funcionar propriamente ainda) 
 
 Funcionalidades:
 
